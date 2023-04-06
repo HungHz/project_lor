@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="web_favicon.ico" type="image/x-icon">
+        <title>Monitoring Air</title>
+    </head>
+    <body>
+        <div class="row">
+        <article>
+            <div class="title">
+                <h1>WEB SERVER</h1>
+            </div>
+            <div>
+                <div id="aqi">
+                    <div>
+                        <div>
+                            <p  class="textaqi">AQI</p>
+                            <span  class="textaqi" id="giatriaqi">null</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rowbox">
+            <div>
+                <div id="temp">
+                    <div class="text">
+                        <div>
+                            <span>NHIỆT ĐỘ</span>
+                        </div>
+                        <div>
+                            <span id="giatrinhietdo">null</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="humi">
+                    <div class="text">
+                        <div>
+                            <span>ĐỘ ẨM</span>
+                        </div>
+                        <div>
+                            <span id="giatridoam">null</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="air">
+                <div id="pm2_5">
+                    <div class="text">
+                        <div>
+                            <span>PM2.5</span>
+                        </div>
+                        <div>
+                            <span  id="giatripm">null</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="co">
+                    <div class="text">
+                        <div>
+                            <span>CO</span>
+                        </div>
+                        <div>
+                            <span id="giatrico">null</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div>
+                <div id="img">
+                    <img src="AQI.png" alt="">
+                </div>
+            </div>
+        </article>
+        <aside>
+            <div>
+                <div class="boxtime">
+                    <div id="oclock">00:00:00</div>
+                    <span id="current-time">00/00/00</span>
+                </div>
+                <div class="boxdothi">
+                    <div class="dothi1">
+                        <iframe width="900" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1904636/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                    </div>
+                    <div class="dothi2">
+                        <div class="dothi21">
+                            <iframe width="440" height="250" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1904636/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                        </div>
+                        <div class="dothi22">
+                            <iframe width="440" height="250" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/1904636/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </aside>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+        <!-- lien ket voi functions.js -->
+        <script src="script.js"></script>
+    </body>
+</html>
